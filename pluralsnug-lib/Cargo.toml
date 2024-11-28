@@ -1,0 +1,13 @@
+[package]
+name = "pluralsnug-lib"
+description = "library for managing the pluralsnug system format"
+version = "0.1.0"
+
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+dtt = "0.0.8"
+rgb = "0.8.50"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = { version = "1.0.133", features = ["serde"] }

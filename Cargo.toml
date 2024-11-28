@@ -1,0 +1,8 @@
+[workspace]
+
+members = ["pluralsnug-lib"]
+resolver = "2"
+
+[workspace.package]
+authors = ["Fnige"]
+edition = "2021"
