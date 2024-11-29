@@ -1,5 +1,5 @@
-use crate::types::{self, rgb};
 use super::io::{file_read, file_write};
+use crate::types::{self, rgb};
 use rgb::Rgb;
 use serde::{Deserialize, Serialize};
 use std::{
@@ -7,17 +7,17 @@ use std::{
 	path::{Path, PathBuf},
 };
 
-/* well we got a new spanner in the works for this, 
+/* well we got a new spanner in the works for this,
 	idiomatic rust means we validate in a funny way
 
 	as itll get repetitive, nnv = needs no validation
 */
 #[derive(Debug, Serialize, Deserialize)]
 pub struct System {
-	name: Option<String>,			// nnv
-	description: Option<String>,	// nnv
-	pronouns: Option<String>,		// nnv
-	colour: rgb<u8>,
+	name: Option<String>,        // nnv
+	description: Option<String>, // nnv
+	pronouns: Option<String>,    // nnv
+	colour: Rgb<u8>,
 }
 
 impl System {
