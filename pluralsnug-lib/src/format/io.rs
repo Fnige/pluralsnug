@@ -1,8 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::{fs, io, path};
 
-use super::system::System;
-
 // Combine path and name, let path be fully handled in the function call instead
 pub(super) fn file_write<T: Serialize, P: AsRef<path::Path>>(
 	file: &T,
