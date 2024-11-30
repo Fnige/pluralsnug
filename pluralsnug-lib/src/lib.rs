@@ -1,6 +1,9 @@
 #![allow(unused)]
 
-use std::{fs, io as std_io, path::{self, PathBuf}};
+use std::{
+	fs, io as std_io,
+	path::{self, PathBuf},
+};
 
 use format::System;
 use serde::{Deserialize, Serialize};
