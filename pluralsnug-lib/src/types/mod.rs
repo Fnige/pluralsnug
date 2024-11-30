@@ -9,4 +9,6 @@ pub mod url {
 	pub use url::*;
 }
 
-pub mod id;
+pub mod uuid {
+	pub use uuid::*;
+}

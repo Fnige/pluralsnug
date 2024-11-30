@@ -1,4 +1,4 @@
-use crate::types::{rgb::Rgb, url::Url};
+use crate::types::{rgb::Rgb, url::Url, uuid::Uuid};
 use dtt::datetime::DateTime;
 use serde::{Deserialize, Serialize};
 use std::{fs::File, io as std_io, path::PathBuf};
@@ -6,21 +6,21 @@ use std::{fs::File, io as std_io, path::PathBuf};
 /* well we got a new spanner in the works for this,
 	idiomatic rust means we validate in a funny way
 
-	as itll get repetitive, nnv = needs no validation
+	most types wont need custom validation at least
 */
 #[derive(Debug, Serialize, Deserialize)]
 pub struct System {
-	pub name: Option<String>,        // nnv
-	pub description: Option<String>, // nnv
-	pub pronouns: Option<String>,    // nnv
-	pub colour: Rgb<u8>,             // ext
-	pub avatar_url: Url,             // ext
-	pub members: Vec<Member>,
+	pub name: Option<String>,
+	pub description: Option<String>,
+	pub pronouns: Option<String>,
+	pub colour: Option<Rgb<u8>>,
+	pub avatar_url: Option<Url>,
+	pub members: Option<Vec<Member>>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Member {
-	pub ps_id: String,
+	pub uuid: Uuid,
 	pub name: String,
 }
 
