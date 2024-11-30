@@ -1,5 +1,5 @@
+use crate::types::{rgb::Rgb, url::Url};
 use dtt::datetime::DateTime;
-use crate::types::rgb::Rgb;
 use serde::{Deserialize, Serialize};
 use std::{fs::File, io as std_io, path::PathBuf};
 
@@ -10,10 +10,11 @@ use std::{fs::File, io as std_io, path::PathBuf};
 */
 #[derive(Debug, Serialize, Deserialize)]
 pub struct System {
-	name: Option<String>,        // nnv
-	description: Option<String>, // nnv
-	pronouns: Option<String>,    // nnv
-	colour: Rgb<u8>,
+	pub name: Option<String>,        // nnv
+	pub description: Option<String>, // nnv
+	pub pronouns: Option<String>,    // nnv
+	pub colour: Rgb<u8>,
+	pub avatar_url: Url,
 }
 
 /*

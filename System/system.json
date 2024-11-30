@@ -1,1 +1,11 @@
-{"name":null}
+{
+	"name": "Fnige",
+	"description": null,
+	"pronouns": "She/Her",
+	"colour": {
+		"r": 0,
+		"g": 117,
+		"b": 255
+	},
+	"avatar_url": "https://cdn.discordapp.com/avatars/315203411488276482/7d60330a065503858ebae73bfd19f4f9.png?size=256"
+}
