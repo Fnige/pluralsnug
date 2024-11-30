@@ -13,16 +13,18 @@ pub struct System {
 	pub name: Option<String>,        // nnv
 	pub description: Option<String>, // nnv
 	pub pronouns: Option<String>,    // nnv
-	pub colour: Rgb<u8>,
-	pub avatar_url: Url,
+	pub colour: Rgb<u8>,             // ext
+	pub avatar_url: Url,             // ext
+	pub members: Vec<Member>,
 }
 
-/*
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Member {
+	pub ps_id: String,
 	pub name: String,
 }
 
+/*
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Group {
 	pub name: String,
